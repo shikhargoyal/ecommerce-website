@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> all products shikHarshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="productdetails.html">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+
+        <!-- account page -->
+         <div class="account-page" >
+             <div class="container">
+                 <div class="row">
+                     <div class="col-2">
+                         <img src="images/image1.png" width="100%">
+                     </div>
+                     <div class="col-2">
+                         <div class="form-container">
+                             <div class="form-btn">
+                                 <span onclick="login()">login</span>
+                                 <span onclick="register()">register</span>
+                                 <hr id="indicator">
+
+                             </div>
+                             <form id="login-form">
+                                 <input type="text" placeholder="username">
+                                 <input type="password" placeholder="password">
+                                 <button type="submit" class="btn">login</button>
+                                 <a href="">Forgit password</a>
+                             </form>
+                             <form id="reg-form">
+                                 <input type="text" placeholder="username">
+                                 <input type="email" placeholder="email">
+
+                                 <input type="password" placeholder="password">
+                                 <button type="submit" class="btn">register</button>
+                                 
+                             </form>
+
+
+                         </div>
+                         
+                     </div>
+
+                 </div>
+             </div>
+         </div>
+               
+        
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>
+                        download app for andrpid and ios mobile
+                    </p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose is to sutainbly make the pleausre 
+                        and benifits of sports accessible to the many </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                   <ul>
+                       <li>Coupons</li>
+                       <li>Blogs post</li>
+                       <li>Return policy</li>
+                       <li>join Affiliate</li>
+                   </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Useful links</h3>
+                   <ul>
+                       <li>Fcebook</li>
+                       <li>Twitter</li>
+                       <li>Instagram</li>
+                       <li>you tube</li>
+                    
+                   </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="shikhartutorials"> shikhar goyal tutorials</p>
+        </div>
+    </div>
+    <!-- js for toogle menu -->
+    <script>
+        var MenuItems=document.getElementById("MenuItems")
+
+        MenuItems.style.maxHeight="0px"
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight=="0px")
+            {
+                
+                MenuItems.style.maxHeight="200px";
+            }
+            else
+                {
+                MenuItems.style.maxHeight="0px";
+                }
+        }
+    </script>
+      
+
+      <!-- js for toogle form -->
+   <script>
+       var loginform=document.getElementById("login-form")
+       var regform=document.getElementById("reg-form")
+       var indicatior =document.getElementById("indicator")
+       function register(){
+           regform.style.transform="translateX(0px)";
+           loginform.style.transform="translateX(0px)";
+           indicator.style.transform="translateX(100px)";
+
+       }
+       function login(){
+           regform.style.transform="translateX(300px)";
+           loginform.style.transform="translateX(300px)";
+           indicator.style.transform="translateX(0px)";
+           
+
+       }
+   </script>
+</body>
+
+</html>
